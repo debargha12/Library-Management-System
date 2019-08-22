@@ -1,0 +1,54 @@
+<head>
+	<Title>
+		NEW REGISTRATION
+	</Title>
+	<script>
+function validateForm() {
+  var x = document.forms["myForm"]["Ssn"].value;
+  var y = document.forms["myForm"]["Bname"].value;
+  var z = document.forms["myForm"]["Address"].value;
+  var a = document.forms["myForm"]["Phone"].value;
+  if (x == "") {
+    alert("All the fields must be filled out!!");
+    return false;
+  }
+  if (y == "") {
+    alert("All the fields must be filled out!!");
+    return false;
+  }
+  if (z == "") {
+    alert("All the fields must be filled out!!");
+    return false;
+  }
+  if (a == "") {
+    alert("All the fields must be filled out!!");
+    return false;
+  }
+
+}
+</script>
+</head>
+
+<body>
+<div align=center>
+<h3><b> NEW REGISTRATION</b></h3>
+</div>
+</br>
+
+
+	
+
+	<hr></hr>
+	<br>
+	<div align=center>
+		<form name="myForm" onsubmit="return validateForm()" method = "POST" action="signups.php">
+			SSN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "Ssn" ><br><br>
+			NAME:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "Bname" ><br><br>
+			ADDRESS:&nbsp;<input type = "text" name = "Address" ><br><br>
+			PHONE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "Phone" ><br><br>
+			
+			<input type = "submit" name = "submit" value="submit" /><br><br>
+		</form>
+	</div>
+
+</body>	

@@ -1,0 +1,44 @@
+<head>
+
+		<script>
+function validateForm() {
+  var x = document.forms["myForm"]["isbn"].value;
+  var y = document.forms["myForm"]["card_id"].value;
+
+  if (x == "") {
+    alert("Both ISBN and CARD ID must be filled!!");
+    return false;
+  }
+  if (y == "") {
+    alert("Both ISBN and CARD ID must be filled!!");
+    return false;
+  }
+  
+}
+</script>
+</head>
+
+
+<body>
+<div align=center>
+<h3><b> CHECK OUT </b></h3>
+</div>
+</br>
+
+
+	
+
+	<hr></hr>
+	<br>
+	<div align=center>
+		<form name="myForm" method = "POST" action="checkout1.php" onsubmit="return validateForm()">
+			ISBN:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "isbn" ><br><br>
+			Card ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "card_id" ><br><br>
+			Date Out:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "date_out" ><br><br>
+			Due Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "due_date" ><br><br>
+			Date In:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "date_in" ><br><br>
+			<input type = "submit" name = "submit" value="submit" /><br><br>
+		</form>
+	</div>
+
+</body>	
